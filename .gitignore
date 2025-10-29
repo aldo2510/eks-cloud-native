@@ -1,0 +1,42 @@
+# Archivos de estado (contienen información sensible)
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Archivos de variables sensibles
+*.tfvars
+*.tfvars.json
+terraform.tfvars
+
+# Archivos de configuración local
+.terraformrc
+terraform.rc
+
+# Directorio de dependencias
+.terraform/
+
+# Archivos de lock
+.terraform.lock.hcl
+
+# Archivos de salida o logs locales
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.tfstate.backup
+
+# Archivos de backup de editores
+*.bak
+*.swp
+*.tmp
+*.log
+
+# Configuraciones locales del entorno o IDE
+.idea/
+.vscode/
+*.iml
+
+# Archivos de pruebas o temporales
+.DS_Store
+Thumbs.db
