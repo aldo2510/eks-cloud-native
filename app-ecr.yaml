@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-ecr
+  labels:
+    app: app-ecr
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pod-ecr
+  template:
+    metadata:
+      labels:
+        app: pod-ecr
+    spec:
+      containers:
+      - name: hello-world
+        image: 603685644833.dkr.ecr.us-west-2.amazonaws.com/repo-lab:2
+        ports:
+        - containerPort: 80
