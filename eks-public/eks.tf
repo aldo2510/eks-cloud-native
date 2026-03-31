@@ -1,7 +1,7 @@
 resource "aws_eks_cluster" "eks_demo" {
   name     = "EKS-Lab"
   role_arn = aws_iam_role.eks_role.arn
-  version  = "1.34"
+  version  = "1.35"
 
   vpc_config {
     subnet_ids              = aws_subnet.public_subnets[*].id
